@@ -52,7 +52,7 @@ class UserController extends ApiController
         $optionBuilder->setTimeToLive(60*20);
 
         $notificationBuilder = new PayloadNotificationBuilder('please help people');
-        $notificationBuilder->setBody($request->message);
+        $notificationBuilder->setBody($request->message)
             ->setSound('default');
 
         $dataBuilder = new PayloadDataBuilder();
