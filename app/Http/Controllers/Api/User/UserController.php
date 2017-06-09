@@ -26,8 +26,6 @@ class UserController extends ApiController
         $data = $request->all();
         $data['password'] = bcrypt('secret');
         $data['name'] = 'adsfsdf';
-
-        $
         $user = User::create($data);
         return $this->showOne($user);
     }
