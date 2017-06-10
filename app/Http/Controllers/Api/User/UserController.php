@@ -42,7 +42,8 @@ class UserController extends ApiController
             'message' => 'required',
         ];
         $this->validate($request, $rules);
-        $usrs =  User::all()->pluck('token')->toArray();
+        $usrs =  User::pluck('fcm_token')->toArray();
+
         dd($usrs);
         $optionBuilder = new OptionsBuilder();
         $optionBuilder->setTimeToLive(60*20);
