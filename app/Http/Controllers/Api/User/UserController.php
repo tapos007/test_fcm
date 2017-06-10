@@ -42,7 +42,8 @@ class UserController extends ApiController
             'message' => 'required',
         ];
         $this->validate($request, $rules);
-        $usrs =  User::all()->pluck('token')->toJson();
+        $usrs =  User::all()->pluck('token')->toArray();
+
 
 
 
