@@ -43,10 +43,7 @@ class UserController extends ApiController
         ];
         $this->validate($request, $rules);
         $usrs =  User::all()->pluck('token')->toArray();
-
-
-
-
+        dd($usrs);
         $optionBuilder = new OptionsBuilder();
         $optionBuilder->setTimeToLive(60*20);
 
