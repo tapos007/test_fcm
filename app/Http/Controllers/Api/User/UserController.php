@@ -36,7 +36,7 @@ class UserController extends ApiController
         return $this->showAll($usrs,200);
     }
 
-    public function sendnotificatio(Request $request)
+    public function sendnotification(Request $request)
     {
         $rules = [
             'message' => 'required',

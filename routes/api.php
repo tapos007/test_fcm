@@ -19,4 +19,4 @@ use Illuminate\Http\Request;
 
 Route::post('users','Api\User\UserController@index');
 Route::get('users','Api\User\UserController@show');
-Route::post('users/notify','Api\User\UserController@sendnotificatio');
+Route::post('users/notify','Api\User\UserController@sendnotification');
